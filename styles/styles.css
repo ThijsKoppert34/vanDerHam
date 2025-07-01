@@ -1,12 +1,12 @@
 @font-face {
   font-family: "Manrope";
-  src: url(./fonts/Manrope-VariableFont_wght.ttf) format("truetype");
+  src: url(../fonts/Manrope-VariableFont_wght.ttf) format("truetype");
   font-weight: 50 900;
 }
 
 @font-face {
   font-family: "Exo2";
-  src: url(./fonts/Exo2-VariableFont_wght.ttf) format("truetype");
+  src: url(../fonts/Exo2-VariableFont_wght.ttf) format("truetype");
   font-weight: 50 900;
 }
 
@@ -45,7 +45,7 @@
   font-family: "Manrope", sans-serif;
   font-size: var(--font-size-button);
   text-decoration: none;
-  background-color: var(--primary-blue);
+  background-color: var(--dark-blue);
   padding: 1vw 7vw;
   position: relative;
 }

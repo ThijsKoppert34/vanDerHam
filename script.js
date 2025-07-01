@@ -81,3 +81,18 @@ const navRechts = document.querySelector(".nav-rechts");
 hamburgerMenu.addEventListener("click", () => {
   navRechts.classList.toggle("show");
 });
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.to(".tandwiel", {
+  rotation: 360,
+  ease: "none",
+  scrollTrigger: {
+    trigger: "body", // trigger is hele body
+    start: "top top",
+    end: "bottom bottom",
+    scrub: true,
+  },
+});
+
+console.log("joi");
