@@ -1,5 +1,3 @@
-console.log("script geladen");
-
 gsap.utils.toArray(".hulp-tegel").forEach((tegel, i) => {
   gsap.from(tegel, {
     opacity: 0,
@@ -77,16 +75,12 @@ gsap.fromTo(
   }
 );
 
-gsap.to(".tandwiel", {
-  rotation: 360,
-  repeat: -1,
-  ease: "linear",
-  duration: 5,
-});
-
 const hamburgerMenu = document.querySelector(".hamburger-menu");
 const navRechts = document.querySelector(".nav-rechts");
+
+console.log(hamburgerMenu, navRechts);
 
 hamburgerMenu.addEventListener("click", () => {
   navRechts.classList.toggle("show");
 });
+
