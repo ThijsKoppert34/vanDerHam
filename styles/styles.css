@@ -12,7 +12,7 @@
 
 :root {
   --primary-blue: #101d42;
-  --highlight-blue: #00d8e8;
+  --highlight-blue: #00c1d9;
   --dark-blue: #0c1226;
 
   --font-size-base: clamp(0.875rem, 0.7434rem + 0.5263vw, 1.375rem);
@@ -532,7 +532,7 @@ footer {
     position: absolute;
     top: 100%;
     right: 0;
-    background-color: var(--primary-blue);
+    background-color: var(--dark-blue);
     width: 100%;
     overflow: hidden;
     max-height: 0;

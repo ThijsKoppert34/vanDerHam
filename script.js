@@ -1,3 +1,5 @@
+console.log("script geladen");
+
 gsap.utils.toArray(".hulp-tegel").forEach((tegel, i) => {
   gsap.from(tegel, {
     opacity: 0,
@@ -75,24 +77,16 @@ gsap.fromTo(
   }
 );
 
+gsap.to(".tandwiel", {
+  rotation: 360,
+  repeat: -1,
+  ease: "linear",
+  duration: 5,
+});
+
 const hamburgerMenu = document.querySelector(".hamburger-menu");
 const navRechts = document.querySelector(".nav-rechts");
 
 hamburgerMenu.addEventListener("click", () => {
   navRechts.classList.toggle("show");
 });
-
-gsap.registerPlugin(ScrollTrigger);
-
-gsap.to(".tandwiel", {
-  rotation: 360,
-  ease: "none",
-  scrollTrigger: {
-    trigger: "body", // trigger is hele body
-    start: "top top",
-    end: "bottom bottom",
-    scrub: true,
-  },
-});
-
-console.log("joi");
