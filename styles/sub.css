@@ -10,6 +10,35 @@
   font-weight: 50 900;
 }
 
+@font-face {
+  font-family: "Inter";
+  src: url(../fonts/Inter-VariableFont_opsz\wght.ttf) format("truetype");
+  font-weight: 50 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url(../fonts/Inter-Italic-VariableFont_opsz\wght.ttf) format("truetype");
+  font-weight: 50 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "IBM";
+  src: url(../fonts/IBMPlexSans-VariableFont_wdth-wght.ttf) format("truetype");
+  font-weight: 50 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "IBM";
+  src: url(../fonts/IBMPlexSans-Italic-VariableFont_wdth-wght.ttf)
+    format("truetype");
+  font-weight: 50 900;
+  font-style: italic;
+}
+
 :root {
   --primary-blue: #101d42;
   --highlight-blue: #00c1d9;
@@ -47,12 +76,12 @@
 }
 
 .contact-hero-content h1 {
-  z-index: 20;
+  z-index: 2;
   letter-spacing: 2px;
 }
 
-.contact-hero-content a,
-.contact-hero-content span {
+.breadcrumb a,
+.breadcrumb span {
   font-size: var(--font-size-small);
   text-decoration: none;
   color: white;
@@ -110,7 +139,7 @@
 }
 
 .contact-alles h3 {
-  font-family: "Manrope", sans-serif;
+  font-family: "IBM", sans-serif;
   margin-bottom: 1rem;
 }
 
@@ -131,7 +160,7 @@ textarea:focus {
   flex-direction: column;
   width: 45cqw;
   gap: 2rem;
-  font-family: "Manrope", sans-serif;
+  font-family: "IBM", sans-serif;
 }
 
 .contact-formulier button {
@@ -139,7 +168,7 @@ textarea:focus {
   text-decoration: none;
   background-color: var(--highlight-blue);
   width: max-content;
-  font-family: "manrope";
+  font-family: "IBM";
   margin-top: auto;
   color: var(--dark-blue);
   font-weight: 500;
@@ -167,7 +196,7 @@ textarea:focus {
 }
 
 .contact-zin {
-  font-family: "Manrope", sans-serif;
+  font-family: "IBM", sans-serif;
   font-style: italic;
   font-weight: 100;
   margin-top: 1rem;
@@ -185,35 +214,76 @@ textarea:focus {
 
 .contact-item p {
   font-size: var(--font-size-base);
-  font-family: "Manrope", sans-serif;
+  font-family: "IBM", sans-serif;
 }
 
 .nav-rechts a:nth-of-type(1).actief,
 .nav-rechts a:nth-of-type(2).actief,
 .nav-rechts a:nth-of-type(3).actief {
-  border-bottom: 1px solid var(--highlight-blue);
+  position: relative;
 }
 
-@media (max-width: 768px) {
-  .contact-alles {
-    flex-direction: column;
-    gap: 2rem;
-  }
+.nav-rechts a.actief::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -7px;
+  width: 100%;
+  height: 1px;
+  background-color: var(--highlight-blue);
 }
 
 .projecten-overzicht {
   display: flex;
   flex-direction: column;
-  gap: 60px;
-  padding: 2rem 0 2rem 7vw;
+  gap: 3rem;
+  padding: 4rem 0 2rem 0;
 }
 
-.project {
+.project-links,
+.project-rechts {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 2rem;
   position: relative;
+  align-items: stretch;
+}
+
+.project-links {
+  padding: 0 0 2rem 7vw;
+}
+
+.project-rechts {
+  padding: 0 7vw 2rem 0;
+}
+
+.project-rechts .project-content {
+  align-items: flex-end;
+  font-family: "IBM", sans-serif;
+}
+
+.projecten-overzicht h2 {
+  font-size: var(--font-size-h2);
+}
+
+.projecten-overzicht p {
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+.projecten-overzicht small {
+  font-size: var(--font-size-small);
+  font-style: italic;
+}
+
+.projecten-overzicht {
+  font-family: "IBM", sans-serif;
+}
+
+.project-rechts .project-content p {
+  text-align: right;
 }
 
 .project-content {
@@ -221,12 +291,6 @@ textarea:focus {
   flex-direction: column;
   gap: 1rem;
   flex: 1;
-  height: 100%;
-}
-
-.project-content h2 {
-  font-size: 24px;
-  color: var(--dark-blue);
 }
 
 .project-content .projecten-datum {
@@ -235,40 +299,42 @@ textarea:focus {
   color: #555;
 }
 
-.project-content p {
-  line-height: 1.6;
-}
-
 .project-button {
   display: inline-block;
-  background-color: #28c4d8;
-  color: white;
+  background-color: none;
+  color: var(--highlight-blue);
+  border: solid 1px var(--highlight-blue);
   text-decoration: none;
   padding: 10px 20px;
   border-radius: 6px;
   margin-top: auto;
+  box-sizing: border-box;
   width: max-content;
+  transition: 0.2s;
 }
 
 .project-button:hover {
-  background-color: #25b0c2;
+  box-sizing: border-box;
+  background-color: var(--highlight-blue);
+  color: white;
+  border: solid 1px var(--highlight-blue);
 }
 
 .project-afbeelding {
   position: relative;
   flex: 1;
-  max-width: 500px;
 }
 
 .project-afbeelding img {
   width: 100%;
-  height: auto;
+  height: 350px;
+  object-fit: cover;
   border-radius: 4px;
   position: relative;
   z-index: 2;
 }
 
-.project-afbeelding::before {
+.project-links .project-afbeelding::before {
   content: "";
   position: absolute;
   top: 20px;
@@ -278,5 +344,170 @@ textarea:focus {
   background-color: var(--highlight-blue);
   opacity: 0.1;
   z-index: 1;
-  border-radius: 4px;
+}
+
+.project-rechts .project-afbeelding::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: -20px;
+  width: 100%;
+  height: 100%;
+  background-color: var(--highlight-blue);
+  opacity: 0.1;
+  z-index: 1;
+}
+
+.project-hero {
+  background-color: var(--primary-blue);
+  padding: 0.5rem 7vw 2rem 7vw;
+  display: flex;
+  height: 28vh;
+}
+
+.project-hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 1200px;
+  color: white;
+  font-family: "Exo2", sans-serif;
+  font-size: var(--font-size-h2);
+}
+
+.project-hero-titel {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+  margin-top: auto;
+}
+
+.project-hero-titel img {
+  width: 4rem;
+  animation: spin 20s linear infinite;
+}
+
+.project-content-detail {
+  display: flex;
+  padding: 3rem 7vw 3rem 7vw;
+  gap: 3rem;
+  font-family: "IBM", sans-serif;
+}
+
+.project-content-tekst {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.gaterug-button {
+  display: inline-block;
+  background-color: none;
+  color: var(--highlight-blue);
+  border: solid 1px var(--highlight-blue);
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  margin-top: auto;
+  box-sizing: border-box;
+  width: max-content;
+  transition: 0.2s;
+}
+
+.gaterug-button:hover {
+  box-sizing: border-box;
+  background-color: var(--highlight-blue);
+  color: white;
+  border: solid 1px var(--highlight-blue);
+}
+
+/* === SLIDER === */
+
+.slider-wrapper {
+  position: relative;
+  max-width: 35rem;
+  margin: 0 auto;
+}
+
+.container {
+  margin-left: auto;
+}
+
+.slider {
+  display: flex;
+  position: relative;
+  aspect-ratio: 16/9;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  border-radius: 0.4rem;
+}
+
+.slider::-webkit-scrollbar {
+  display: none;
+}
+
+.slider img {
+  flex: 1 0 100%;
+  scroll-snap-align: start;
+  object-fit: cover;
+}
+
+.slider-nav {
+  display: flex;
+  column-gap: 1.4rem;
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.slider-nav a {
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: 0.75;
+  transition: opacity ease 250ms;
+}
+
+.slider-nav a:hover {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .contact-alles {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .projecten-overzicht {
+    gap: 0;
+  }
+
+  .nav-rechts a.actief::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    width: 100%;
+    height: 1px;
+    background-color: var(--highlight-blue);
+  }
+
+  .project-links,
+  .project-rechts {
+    flex-direction: column;
+    padding-right: 7vw;
+    padding-left: 7vw;
+  }
+
+  .project-rechts {
+    flex-direction: column-reverse;
+  }
+
+  .project-afbeelding::before {
+    display: none;
+  }
 }
