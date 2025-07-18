@@ -25,14 +25,29 @@
   font-style: italic;
 }
 
+@font-face {
+  font-family: "Titillium";
+  src: url(../fonts/TitilliumWeb-Black.ttf) format("truetype");
+  font-weight: 50 900;
+  font-style: bold;
+}
+
+@font-face {
+  font-family: "Titillium";
+  src: url(../fonts/TitilliumWeb-Bold.ttf) format("truetype");
+  font-weight: 50 900;
+  font-style: bold;
+}
+
 :root {
   --primary-blue: #101d42;
-  --highlight-blue: #00b8e0;
+  --highlight-blue: #00c1d9;
   --dark-blue: #0c1226;
+  --light-gray: #f5f5f5;
 
   --font-size-base: clamp(0.875rem, 0.7434rem + 0.5263vw, 1.375rem);
-  --font-size-h1: clamp(1.5rem, 0.7434rem + 3.0263vw, 4.375rem);
-  --font-size-h2: clamp(1.25rem, 0.7895rem + 1.8421vw, 3rem);
+  --font-size-h1: clamp(2rem, 1.6053rem + 1.5789vw, 3.5rem);
+  --font-size-h2: clamp(1.625rem, 1.1316rem + 1.9737vw, 3.5rem);
   --font-size-button: clamp(0.75rem, 0.6vw + 0.4rem, 0.875rem);
   --font-size-small: clamp(0.75rem, 0.7rem + 0.2vw, 0.875rem);
   --font-size-small-md: clamp(0.875rem, 0.8rem + 0.3vw, 1rem);
@@ -162,19 +177,18 @@
 }
 
 .hero-right h2 {
-  font-family: "IBM", sans-serif;
-  font-weight: 300;
-  letter-spacing: 0.5px;
+  font-family: "Exo2", sans-serif;
   font-size: var(--font-size-h2);
+  line-height: 1;
+  font-weight: 500;
   color: white;
 }
 
 .hero-right p {
   font-family: "IBM", sans-serif;
   font-size: var(--font-size-base);
-  font-weight: 130;
+  font-weight: 300;
   color: white;
-  letter-spacing: 0.7px;
 }
 
 .hero-buttons {
@@ -236,10 +250,10 @@
 
 .hero-left h1 {
   font-family: "Exo2", sans-serif;
-  font-weight: 700;
-  font-size: var(--font-size-h1);
+  font-weight: 800;
+  font-size: clamp(2.25rem, 1.6579rem + 2.3684vw, 4.5rem);
   color: white;
-  line-height: 1.2;
+  line-height: 1;
 }
 
 .hulp-grid {
@@ -304,7 +318,7 @@
   margin-bottom: 1.6rem;
   color: var(--dark-blue);
   font-family: "IBM", sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: 0.5px;
   font-size: var(--font-size-h2);
 }
@@ -322,12 +336,12 @@
   text-align: center;
   transition: transform 0.4s ease, opacity 0.4s ease;
   transform: translateY(100%);
+  font-size: var(--font-size-small-md);
   opacity: 0;
   padding: 1.5rem;
   color: var(--primary-blue);
   font-family: "IBM", sans-serif;
   font-weight: 500;
-  font-size: 12px;
   pointer-events: none;
 }
 
@@ -353,11 +367,19 @@
   transform: translateY(0);
 }
 
+.hulp-overlay .hulp-titel {
+  min-height: 2.6em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+}
+
 .uitlichting {
   display: flex;
   margin-top: 2rem;
   box-sizing: border-box;
-  background-color: rgb(234, 234, 234);
+  background-color: var(--light-gray);
   margin-bottom: 3rem;
   position: relative;
 }
@@ -483,13 +505,14 @@ footer {
 
 .social-knoppen {
   display: flex;
-  gap: 1rem;
+  gap: 0.5rem;
   justify-content: flex-end;
   align-items: flex-end;
 }
 
-.social-knoppen svg {
-  width: 3vw;
+.social-knoppen img {
+  width: 5vw;
+  max-width: 3rem;
   height: max-content;
   color: var(--highlight-blue);
 }
