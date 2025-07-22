@@ -375,7 +375,7 @@ textarea:focus {
 .project-content-tekst {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 2rem;
   font-size: var(--font-size-base);
 }
 
@@ -457,6 +457,137 @@ textarea:focus {
 
 .slider-nav a:hover {
   opacity: 1;
+}
+
+.elektrotechniek,
+.duurzame-energie,
+.smart-home,
+.thuisbatterij,
+.klimaatbeheersystemen {
+  display: none;
+  font-family: "IBM", sans-serif;
+  line-height: 1.6;
+  font-weight: 300;
+  font-size: var(--font-size-base);
+
+  & b {
+    font-weight: 500;
+  }
+}
+
+.diensten:has(input[value="elektrotechniek"]:checked) .elektrotechniek,
+.diensten:has(input[value="duurzaam"]:checked) .duurzame-energie,
+.diensten:has(input[value="verlichting"]:checked) .smart-home,
+.diensten:has(input[value="thuisbatterij"]:checked) .thuisbatterij,
+.diensten:has(input[value="klimaat"]:checked) .klimaatbeheersystemen {
+  display: flex;
+  gap: 1rem;
+  max-width: 1000px;
+}
+
+.diensten-verborgen-img {
+  width: 30rem;
+  height: 20rem;
+  object-fit: cover;
+  margin-left: auto;
+}
+
+input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.diensten {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem 7vw;
+}
+
+.diensten-intro {
+  font-family: "IBM", sans-serif;
+  color: var(--dark-blue);
+  max-width: 1000px;
+}
+
+.diensten-intro h2 {
+  font-size: var(--font-size-h2);
+}
+
+.diensten-intro p {
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+  font-weight: 300;
+  margin-bottom: 0.5rem;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.2rem;
+  max-width: 1000px;
+  margin: 0 0 2rem 0; /* ⬅️ geen auto-centering meer */
+  text-align: center;
+  justify-content: start; /* ⬅️ alle grid-items naar links */
+}
+
+.service-grid img {
+  width: auto;
+  height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.service-item {
+  display: flex;
+  cursor: pointer;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1rem 0;
+  gap: 1rem;
+  transition: background-color 0.3s ease;
+  font-family: "IBM", sans-serif;
+  font-size: var(--font-size-small);
+}
+
+.service-item:has(input:checked) {
+  font-weight: 600;
+  background-color: var(--primary-blue);
+  border-radius: 4px;
+  color: var(--highlight-blue);
+}
+
+.service-item:hover .service-img {
+  animation: hover-twist 1s linear infinite;
+}
+
+.service-item:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes hover-twist {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(8deg);
+  }
+
+  75% {
+    transform: rotate(-8deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.service-item img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
 }
 
 @media (max-width: 768px) {
