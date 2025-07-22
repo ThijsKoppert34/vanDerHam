@@ -208,9 +208,11 @@ textarea:focus {
 
 .contact-zin {
   font-family: "IBM", sans-serif;
-  font-style: italic;
-  font-weight: 100;
+  font-weight: var(--font-size-base);
+  font-weight: 300;
   margin-top: 1rem;
+  line-height: 1.6;
+  max-width: 400px;
 }
 
 .contact-item {
