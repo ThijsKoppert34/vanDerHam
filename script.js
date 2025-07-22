@@ -83,4 +83,3 @@ console.log(hamburgerMenu, navRechts);
 hamburgerMenu.addEventListener("click", () => {
   navRechts.classList.toggle("show");
 });
-
