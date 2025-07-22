@@ -104,6 +104,11 @@
   border: 1px solid var(--highlight-blue);
 }
 
+.projecting-projectknop:hover {
+  background-color: var(--highlight-blue);
+  color: var(--light-gray);
+}
+
 .projecting-alles-button:hover .projecting-allesknop::after {
   transform: scaleX(1);
 }
@@ -174,7 +179,6 @@
 }
 
 .projecting h2 {
-  margin-bottom: 1.6rem;
   color: var(--dark-blue);
   font-family: "TitilliumWeb", sans-serif;
   font-weight: 500;
@@ -185,7 +189,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 1rem;
+  margin-bottom: 1.6rem;
 }
 
 .projecting-alles-button {
@@ -196,6 +200,17 @@
   margin-left: auto;
   margin-right: 1rem;
   width: max-content;
+}
+
+.projecting-alles-button-mobile {
+  display: flex;
+  transition: transform 0.4s ease;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: auto;
+  margin-right: 1rem;
+  width: max-content;
+  opacity: 0;
 }
 
 .projecting-alles-button svg {
@@ -222,4 +237,14 @@
   font-size: var(--font-size-base);
   color: var(--dark-blue);
   font-weight: 300;
+}
+
+@media (max-width: 768px) {
+  .projecting-alles-button-mobile {
+    opacity: 1;
+  }
+
+  .projecting-alles-button {
+    display: none;
+  }
 }
