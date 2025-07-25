@@ -159,7 +159,8 @@
 
 .projecting-wrapper {
   display: flex;
-  align-items: center;
+  
+  align-items: stretch;
   justify-content: space-between;
   gap: 2rem;
 }
@@ -217,6 +218,15 @@
   color: var(--primary-blue);
 }
 
+.projecting-wrapper small {
+  padding: 0.6rem;
+  border: 0.4px solid var(--dark-blue);
+  letter-spacing: 1.6px;
+  font-weight: 300;
+  width: max-content;
+  border-radius: var(--border-radius-md);
+}
+
 .erkend-leerbedrijf img {
   width: 100%;
   max-width: 200px;
@@ -228,7 +238,7 @@
   display: flex;
   align-items: center;
   padding: 2rem 7vw;
-  background-color: #e8f9fb;
+  background-color: var(--light-gray);
   gap: 3rem;
   font-family: "IBM", sans-serif;
 }
