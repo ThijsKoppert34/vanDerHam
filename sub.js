@@ -42,3 +42,41 @@ document.addEventListener("DOMContentLoaded", function () {
 
   setInterval(nextSlide, delay);
 });
+
+gsap.fromTo(
+  ".slide1-afbeelding",
+  {
+    x: 300,
+    opacity: 0,
+  },
+  {
+    x: 0,
+    opacity: 1,
+    duration: 1,
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: ".slide1-afbeelding",
+      start: "top 80%",
+      toggleActions: "play reverse play reverse",
+    },
+  }
+);
+
+gsap.fromTo(
+  ".uitlichting1-links",
+  {
+    x: -300,
+    opacity: 0,
+  },
+  {
+    x: 0,
+    opacity: 1,
+    duration: 1,
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: ".uitlichting1-links",
+      start: "top 80%",
+      toggleActions: "play reverse play reverse",
+    },
+  }
+);

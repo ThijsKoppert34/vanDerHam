@@ -37,6 +37,8 @@ uitlichting.addEventListener("mouseleave", () => {
 
 gsap.registerPlugin(ScrollTrigger);
 
+const uitlichtingLinks = document.querySelectorAll(".uitlichting1-links");
+
 gsap.fromTo(
   ".slide-afbeelding",
   {
@@ -68,12 +70,14 @@ gsap.fromTo(
     duration: 1,
     ease: "power3.out",
     scrollTrigger: {
-      trigger: ".uitlichting-links",
+      trigger: ".uitlichting1-links",
       start: "top 80%",
       toggleActions: "play reverse play reverse",
     },
   }
 );
+
+
 
 const hamburgerMenu = document.querySelector(".hamburger-menu");
 const navRechts = document.querySelector(".nav-rechts");
