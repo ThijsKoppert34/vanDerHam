@@ -433,7 +433,7 @@
   width: max-content;
 }
 
-.uitlichting-links button {
+.uitlichting-links a {
   all: unset;
   text-decoration: none;
   background-color: var(--highlight-blue);
@@ -449,7 +449,7 @@
   border: 1px solid transparent;
 }
 
-.uitlichting-links button:hover {
+.uitlichting-links a:hover {
   background-color: var(--primary-blue);
   color: var(--highlight-blue);
   border: 1px solid var(--highlight-blue);
