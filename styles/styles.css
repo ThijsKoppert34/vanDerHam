@@ -46,7 +46,7 @@
   --light-gray: #f5f5f5;
 
   --font-size-base: clamp(0.875rem, 0.7434rem + 0.5263vw, 1.375rem);
-  --font-size-h1: clamp(2rem, 1.6053rem + 1.5789vw, 3.5rem);
+  --font-size-h1: clamp(1.5rem, 0.7434rem + 3.0263vw, 4.375rem);
   --font-size-h2: clamp(1.625rem, 1.1316rem + 1.9737vw, 3.5rem);
   --font-size-button: clamp(0.75rem, 0.6vw + 0.4rem, 0.875rem);
   --font-size-small: clamp(0.75rem, 0.7rem + 0.2vw, 0.875rem);

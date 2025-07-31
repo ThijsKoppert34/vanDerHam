@@ -87,6 +87,7 @@ body {
 }
 
 .contact-hero-content h1 {
+  font-size: var(--font-size-h1);
   z-index: 2;
   letter-spacing: 2px;
 }
