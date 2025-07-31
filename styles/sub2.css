@@ -418,6 +418,43 @@
     opacity: 1;
   }
 
+  .smart-home,
+  .duurzame-energie,
+  .thuisbatterij,
+  .klimaatbeheersystemen,
+  .elektrotechniek {
+    flex-direction: column;
+  }
+
+  .diensten-verborgen-img {
+    width: 100%;
+    height: auto;
+  }
+
+  .overons-content1 {
+    border-right: none;
+    max-width: 100vw;
+  }
+
+  .uitlichting1-links {
+    padding: 2rem 7vw;
+  }
+
+  .overons-content2,
+  .overons-buttons {
+    max-width: 100vw;
+    border-right: none;
+  }
+
+  .uitlichting1 {
+    flex-direction: column;
+  }
+
+  .overons-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
   .projecting-alles-button {
     display: none;
   }

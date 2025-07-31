@@ -321,6 +321,7 @@
 .hulp-sectie h2 {
   justify-self: left;
   margin-bottom: 1.6rem;
+  font-weight: 500;
   color: var(--dark-blue);
   font-family: "Exo2", sans-serif;
   font-size: var(--font-size-h2);
@@ -416,6 +417,9 @@
 .uitlichting-links h2 {
   font-family: "Exo2";
   font-size: var(--font-size-h2);
+  font-weight: 700;
+  font-size: clamp(2.25rem, 1.6579rem + 2.3684vw, 4.5rem);
+  line-height: 1;
   color: var(--dark-blue);
 }
 
@@ -631,8 +635,17 @@ footer {
     display: none;
   }
 
+  .hero-right {
+    max-width: 22rem;
+  }
+
+  .hero-right a {
+    padding: 0.7rem 0.7rem;
+  }
+
   .hero-content {
     height: 40vh;
+    box-sizing: border-box;
   }
 
   .creditsregel {
