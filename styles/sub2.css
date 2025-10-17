@@ -261,7 +261,7 @@
   & ul {
     font-family: "IBM", sans-serif;
     line-height: 1.6;
-    font-weight: 450;
+    font-weight: 300;
     font-size: var(--font-size-base);
     margin-left: 40px;
   }
@@ -349,6 +349,10 @@
   flex-direction: column;
   justify-content: space-between;
   gap: 0.3rem;
+
+  & b {
+    font-weight: 600;
+  }
 }
 
 .uitlichting1-links small,
@@ -404,7 +408,6 @@
 .uitlichting1-links,
 .uitlichting1-rechts {
   flex: 1;
-  cursor: none;
   overflow: hidden;
 }
 
