@@ -58,10 +58,10 @@
 }
 
 :root {
-  --primary-blue: #1C173D;
+  --primary-blue: #111833;
   --highlight-blue: #F28500;
-  --dark-blue: #1C173D;
-  --light-gray: #f5f3fa;
+  --dark-blue: #111833;
+  --light-gray: #f2f4f8;
 
   --font-size-base: clamp(0.875rem, 0.7434rem + 0.5263vw, 1.375rem);
   --font-size-h1: clamp(1.5rem, 0.7434rem + 3.0263vw, 4.375rem);
@@ -310,7 +310,7 @@ textarea:focus {
 .project-content .projecten-datum {
   display: block;
   font-weight: 300;
-  color: #5a5670;
+  color: #4a5568;
 }
 
 .project-button {
@@ -701,6 +701,11 @@ input[type="radio"] {
 
   .service-grid {
     grid-template-columns: repeat(3, 1fr);
+    gap: 0.4rem;
+  }
+
+  .service-item span {
+    font-size: 0.75rem;
   }
 
   .dienst-detail {

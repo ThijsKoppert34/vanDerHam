@@ -58,10 +58,10 @@
 }
 
 :root {
-  --primary-blue: #1C173D;
+  --primary-blue: #111833;
   --highlight-blue: #F28500;
-  --dark-blue: #1C173D;
-  --light-gray: #f5f3fa;
+  --dark-blue: #111833;
+  --light-gray: #f2f4f8;
 
   --font-size-base: clamp(0.875rem, 0.7434rem + 0.5263vw, 1.375rem);
   --font-size-h1: clamp(1.5rem, 0.7434rem + 3.0263vw, 4.375rem);
@@ -176,7 +176,7 @@
 
 .project-locatie {
   font-size: var(--font-size-small);
-  color: #7a7590;
+  color: #6b7280;
   font-weight: 400;
 }
 
@@ -189,7 +189,7 @@
 
 .project-card-info p {
   font-size: var(--font-size-small);
-  color: #5a5670;
+  color: #4a5568;
   line-height: 1.5;
   font-weight: 300;
 }
@@ -237,7 +237,7 @@
   font-size: var(--font-size-base);
   line-height: 1.7;
   font-weight: 300;
-  color: #5a5670;
+  color: #4a5568;
   max-width: 550px;
 }
 
@@ -293,7 +293,7 @@
   font-size: var(--font-size-small);
   line-height: 1.6;
   font-weight: 300;
-  color: #5a5670;
+  color: #4a5568;
 }
 
 .overons-cta {
@@ -394,7 +394,7 @@
 .uitlichting1-links small {
   font-weight: 300;
   letter-spacing: 1.6px;
-  border: solid 1px #c0bdd0;
+  border: solid 1px #cbd5e1;
   border-radius: var(--border-radius-md);
   padding: 0.6rem;
   width: max-content;

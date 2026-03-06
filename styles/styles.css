@@ -70,10 +70,10 @@
 }
 
 :root {
-  --primary-blue: #1C173D;
+  --primary-blue: #111833;
   --highlight-blue: #F28500;
-  --dark-blue: #1C173D;
-  --light-gray: #f5f3fa;
+  --dark-blue: #111833;
+  --light-gray: #f2f4f8;
 
   --font-size-base: clamp(0.875rem, 0.7434rem + 0.5263vw, 1.375rem);
   --font-size-h1: clamp(1.5rem, 0.7434rem + 3.0263vw, 4.375rem);
@@ -120,6 +120,7 @@ body {
 .nav-home img {
   width: 9rem;
   height: auto;
+  display: block;
 }
 
 .nav-rechts {
@@ -205,9 +206,9 @@ body {
   height: 100%;
   background: linear-gradient(
     to right,
-    rgba(28, 23, 61, 0.9) 0%,
-    rgba(28, 23, 61, 0.6) 50%,
-    rgba(28, 23, 61, 0.25) 100%
+    rgba(17, 24, 51, 0.92) 0%,
+    rgba(17, 24, 51, 0.6) 50%,
+    rgba(17, 24, 51, 0.25) 100%
   );
   z-index: 1;
 }
@@ -475,7 +476,7 @@ body {
 .uitlichting-links small {
   font-weight: 300;
   letter-spacing: 1.6px;
-  border: solid 1px #c0bdd0;
+  border: solid 1px #cbd5e1;
   border-radius: var(--border-radius-md);
   padding: 0.6rem;
   width: max-content;
@@ -603,7 +604,7 @@ footer {
   color: rgba(255, 255, 255, 0.6);
   font-family: "IBM", sans-serif;
   font-size: var(--font-size-small);
-  background-color: #15112e;
+  background-color: #0b1025;
   font-weight: 300;
   padding: 2rem 0 1.5rem 0;
 }
@@ -682,8 +683,14 @@ footer {
     flex-direction: column-reverse;
   }
 
+  .social-knoppen a {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+
   .social-knoppen svg {
-    width: 2.6rem;
+    width: 1rem;
+    height: 1rem;
   }
 
   .creditsregel {
