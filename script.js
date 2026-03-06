@@ -13,28 +13,6 @@ gsap.utils.toArray(".hulp-tegel").forEach((tegel, i) => {
   });
 });
 
-// muis bolletje uitlichting hieronder
-
-const uitlichting = document.querySelector(".uitlichting");
-
-const cursor = document.createElement("div");
-cursor.classList.add("cursor-follow");
-uitlichting.appendChild(cursor);
-
-uitlichting.addEventListener("mousemove", (e) => {
-  const rect = uitlichting.getBoundingClientRect();
-  const x = e.clientX - rect.left;
-  const y = e.clientY - rect.top;
-
-  cursor.style.left = `${x}px`;
-  cursor.style.top = `${y}px`;
-  cursor.style.opacity = 1;
-});
-
-uitlichting.addEventListener("mouseleave", () => {
-  cursor.style.opacity = 0;
-});
-
 gsap.registerPlugin(ScrollTrigger);
 
 const uitlichtingLinks = document.querySelectorAll(".uitlichting1-links");
@@ -81,8 +59,6 @@ gsap.fromTo(
 
 const hamburgerMenu = document.querySelector(".hamburger-menu");
 const navRechts = document.querySelector(".nav-rechts");
-
-console.log(hamburgerMenu, navRechts);
 
 hamburgerMenu.addEventListener("click", () => {
   navRechts.classList.toggle("show");

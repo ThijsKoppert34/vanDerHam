@@ -1,9 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Diensten</title>
+    <title>Diensten - Van Der Ham Elektrotechniek</title>
+    <meta
+      name="description"
+      content="Ontdek onze diensten: elektrotechniek, duurzame energie, smart home, thuisbatterijen en klimaatbeheersystemen. Vakwerk op maat."
+    />
     <link rel="stylesheet" href="./styles/styles.css" />
     <link rel="stylesheet" href="./styles/sub.css" />
     <link rel="stylesheet" href="./styles/sub2.css" />
@@ -13,57 +17,41 @@
     <header class="nav-home">
       <a href="./index.html">
         <img
-          src="./images/Van Der Ham - Elektrotechniek - Logo-49.png"
+          src="./images/NEWLOGO.svg"
           alt="van der ham logo"
         />
       </a>
 
-      <button class="hamburger-menu" aria-label="Menu">☰</button>
+      <button class="hamburger-menu" aria-label="Menu">&#9776;</button>
 
       <div class="nav-rechts">
-        <a href="./diensten.html" class="diensten-btn">DIENSTEN</a>
+        <a href="./diensten.html" class="diensten-btn actief">DIENSTEN</a>
         <a href="./projecten.html" class="projecten-btn">PROJECTEN</a>
         <a href="./overons.html" class="overons-btn">OVER ONS</a>
         <a href="./contact.html" class="contact-btn">CONTACT</a>
       </div>
     </header>
     <main>
-      <section class="contact-hero">
-        <div class="contact-hero-content">
-          <nav class="breadcrumb">
-            <a href="./index.html">Home</a>
-            <span class="breadcrumb-pijltje">›</span>
-            <a href="./diensten.html"
-              ><strong class="breadcrumb-highlight">Diensten</strong></a
-            >
-          </nav>
-          <h1>DIENSTEN</h1>
-
-          <img
-            src="./images/tandwiel2-42.png"
-            alt="Draaiend tandwiel"
-            class="tandwiel"
-          />
-        </div>
+      <section class="overons-hero">
+        <nav class="breadcrumb">
+          <a href="./index.html">Home</a>
+          <span class="breadcrumb-pijltje">&#8250;</span>
+          <a href="./diensten.html"
+            ><strong class="breadcrumb-highlight">Diensten</strong></a
+          >
+        </nav>
+        <h1>Onze <span class="hero-accent">diensten</span></h1>
+        <p>
+          Van elektra tot klimaatbeheersing — wij zoeken altijd naar de
+          oplossing die past bij uw situatie. Kies een expertise voor meer
+          informatie.
+        </p>
       </section>
 
       <section class="diensten">
-        <section class="diensten-intro">
-          <p>
-            Goede installaties vallen vaak niet op, ze werken gewoon dag in dag
-            uit. Precies dat is ons doel. Of het nu gaat om elektra,
-            verlichting, energieopslag of klimaatbeheersing: wij zoeken altijd
-            naar de oplossing die past bij uw situatie. Met aandacht voor
-            detail, oog voor de toekomst en een persoonlijke aanpak zorgen we
-            voor techniek waar u op kunt vertrouwen.
-            <br /><br />Kies hier onder een van onze expertises voor meer
-            informatie over onze diensten.
-          </p>
-        </section>
-
         <form class="service-grid">
           <label class="service-item">
-            <input type="radio" name="service" value="elektrotechniek" />
+            <input type="radio" name="service" value="elektrotechniek" checked />
             <img
               class="service-img"
               src="./svg/elektrotechniek.svg"
@@ -79,7 +67,7 @@
               src="./svg/duurzame-energie.svg"
               alt="Duurzame energie"
             />
-            <span>Duurzame energie (PV / Laadpalen)</span>
+            <span>Duurzame energie</span>
           </label>
 
           <label class="service-item">
@@ -89,7 +77,7 @@
               src="./svg/smart-home.svg"
               alt="Verlichting & Smart Home"
             />
-            <span>Verlichting & Smart Home</span>
+            <span>Smart Home</span>
           </label>
 
           <label class="service-item">
@@ -99,7 +87,7 @@
               src="./svg/thuisbatterij.svg"
               alt="Thuisbatterijen & Off grid"
             />
-            <span>Thuisbatterijen & Off grid</span>
+            <span>Thuisbatterij</span>
           </label>
 
           <label class="service-item">
@@ -109,111 +97,120 @@
               src="./svg/klimaatbeheer.svg"
               alt="Klimaatbeheersystemen"
             />
-            <span>Klimaatbeheersystemen</span>
+            <span>Klimaat</span>
           </label>
         </form>
 
-        <section class="elektrotechniek">
-          <div class="elektrotechniek-links">
-            <p>
-              <b>De basis van alles</b>
-            </p>
+        <section class="elektrotechniek dienst-detail">
+          <div class="dienst-detail-tekst">
+            <h2>Elektrotechniek</h2>
+            <p class="dienst-subtitel">De basis van alles</p>
             <p>
               Elke installatie begint met een solide elektrische basis. Of het
               nu gaat om een uitbreiding in huis, het vernieuwen van een
               groepenkast of een complete installatie in een bedrijfspand – wij
               zorgen dat alles klopt. Veilig, netjes weggewerkt en voorbereid op
-              de toekomst. Zo kunt u zonder zorgen verder bouwen op een
-              installatie die staat als een huis.
+              de toekomst.
             </p>
+            <a href="./contact.html#contactformulier" class="dienst-cta-link">Offerte aanvragen &rarr;</a>
           </div>
           <img
             class="diensten-verborgen-img"
             src="./images/elektrotechniek_tegel.jpg"
-            alt=""
+            alt="Elektrotechniek werkzaamheden"
           />
         </section>
-        <section class="duurzame-energie">
-          <div class="duurzaam-links">
+
+        <section class="duurzame-energie dienst-detail">
+          <div class="dienst-detail-tekst">
+            <h2>Duurzame energie</h2>
+            <p class="dienst-subtitel">Van zon naar slim gebruik</p>
             <p>
-              <b>Van zon naar slim gebruik</b>
-            </p>
-            <p>
-              Zonnepanelen leveren pas écht op als u ze combineert met slimme
+              Zonnepanelen leveren pas echt op als u ze combineert met slimme
               oplossingen. Wij ontwerpen installaties die precies aansluiten op
               uw verbruik en toekomstplannen. En met een laadpaal op de oprit
-              laadt u uw auto duurzaam én voordelig op. Geen standaard pakket,
-              maar een systeem dat meegroeit met uw energiebehoefte – dat is pas
-              duurzaam investeren.
+              laadt u uw auto duurzaam en voordelig op.
             </p>
+            <a href="./contact.html#contactformulier" class="dienst-cta-link">Offerte aanvragen &rarr;</a>
           </div>
           <img
             class="diensten-verborgen-img"
             src="./images/LaadPaalHorizontak.jpg"
-            alt=""
+            alt="Laadpaal installatie"
           />
         </section>
-        <section class="smart-home">
-          <div class="smarthome-links">
-            <p>
-              <b>Meer dan alleen licht</b>
-            </p>
+
+        <section class="smart-home dienst-detail">
+          <div class="dienst-detail-tekst">
+            <h2>Verlichting & Smart Home</h2>
+            <p class="dienst-subtitel">Meer dan alleen licht</p>
             <p>
               Goede verlichting doet meer dan een ruimte verlichten – het
               creëert sfeer, comfort en gemak. Wij combineren energiezuinige
               verlichting met slimme besturing: van een enkele kamer tot een
-              volledig geautomatiseerd huis. Stel scènes in, bedien alles met
-              één druk op de knop en ervaar hoe techniek uw dagelijks leven
-              makkelijker en aangenamer maakt.
+              volledig geautomatiseerd huis.
             </p>
+            <a href="./contact.html#contactformulier" class="dienst-cta-link">Offerte aanvragen &rarr;</a>
           </div>
           <img
             class="diensten-verborgen-img"
             src="./images/SmartHomeHorizontal.jpg"
-            alt=""
+            alt="Smart home systeem"
           />
         </section>
-        <section class="thuisbatterij">
-          <div class="thuisbatterij-links">
-            <p>
-              <b>Altijd voorbereid</b>
-            </p>
+
+        <section class="thuisbatterij dienst-detail">
+          <div class="dienst-detail-tekst">
+            <h2>Thuisbatterij & Off grid</h2>
+            <p class="dienst-subtitel">Altijd voorbereid</p>
             <p>
               Met een thuisbatterij gaat geen zonnestraal verloren. U gebruikt
-              uw eigen energie op het moment dat u die nodig hebt, ook ’s avonds
-              of bij stijgende tarieven. Wilt u helemaal onafhankelijk zijn? Dan
-              bieden wij off-grid oplossingen die u zekerheid en vrijheid geven
-              – stroom, altijd en overal. Een investering die zich niet alleen
-              terugbetaalt in geld, maar ook in gemoedsrust.
+              uw eigen energie op het moment dat u die nodig hebt. Wilt u
+              helemaal onafhankelijk zijn? Dan bieden wij off-grid oplossingen
+              die u zekerheid en vrijheid geven.
             </p>
+            <a href="./contact.html#contactformulier" class="dienst-cta-link">Offerte aanvragen &rarr;</a>
           </div>
           <img
             class="diensten-verborgen-img"
             src="./images/ThuisBatterijHorizontal.jpg"
-            alt=""
+            alt="Thuisbatterij installatie"
           />
         </section>
-        <section class="klimaatbeheersystemen">
-          <div class="klimaat-links">
+
+        <section class="klimaatbeheersystemen dienst-detail">
+          <div class="dienst-detail-tekst">
+            <h2>Klimaatbeheersystemen</h2>
+            <p class="dienst-subtitel">Comfort dat je voelt</p>
             <p>
-              <b>Comfort dat je voelt</b>
-            </p>
-            <p>
-              Een aangename temperatuur en frisse lucht zijn onmisbaar, thuis én
+              Een aangename temperatuur en frisse lucht zijn onmisbaar, thuis en
               op het werk. Met onze airco-, ventilatie- en warmtepompsystemen
               creëert u precies dat klimaat waarin mensen zich prettig voelen.
-              Stil, energiezuinig en afgestemd op uw ruimte. Zo geniet u van
-              comfort, zonder concessies te doen aan duurzaamheid of kosten.
+              Stil, energiezuinig en afgestemd op uw ruimte.
             </p>
+            <a href="./contact.html#contactformulier" class="dienst-cta-link">Offerte aanvragen &rarr;</a>
           </div>
           <img
             class="diensten-verborgen-img"
             src="./images/klimaatbeheer_tegel.jpg"
-            alt=""
+            alt="Klimaatbeheersysteem"
           />
         </section>
       </section>
+
+      <section class="overons-cta">
+        <h2>Advies nodig over onze diensten?</h2>
+        <p>
+          Neem vrijblijvend contact met ons op. We helpen u graag met het
+          vinden van de juiste oplossing.
+        </p>
+        <div class="overons-buttons">
+          <a href="./contact.html">Neem contact op</a>
+          <a href="./contact.html#contactformulier">Vraag offerte aan</a>
+        </div>
+      </section>
     </main>
+
     <footer>
       <section class="footer-links">
         <div class="footer-gegevens1">
@@ -228,9 +225,9 @@
       </section>
       <section class="footer-rechts">
         <div class="social-knoppen">
-          <a href=""><img src="./svg/linkedinrond.svg" alt="" /></a>
-          <a href=""><img src="./svg/instarond.svg" alt="" /></a>
-          <a href=""><img src="./svg/facebookrond.svg" alt="" /></a>
+          <a href="https://www.linkedin.com/in/nick-van-der-ham-24bb65187/?originalSubdomain=nl" target="_blank" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="#ffffff" xmlns="http://www.w3.org/2000/svg"><path d="M6.94 5a2 2 0 1 1-4 0 2 2 0 0 1 4 0ZM7 8.48H3V21h4V8.48ZM13.32 8.48H9.34V21h3.94v-6.57c0-3.66 4.77-4 4.77 0V21H22v-7.93c0-6.17-7.06-5.94-8.72-2.91l.04-1.68Z"/></svg></a>
+          <a href="#" target="_blank" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="#ffffff" xmlns="http://www.w3.org/2000/svg"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2Zm-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6Zm9.65 1.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"/></svg></a>
+          <a href="#" target="_blank" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="#ffffff" xmlns="http://www.w3.org/2000/svg"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12Z"/></svg></a>
         </div>
       </section>
     </footer>

@@ -1,9 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Projecten</title>
+    <title>Projecten - Van Der Ham Elektrotechniek</title>
+    <meta
+      name="description"
+      content="Bekijk onze recente projecten. Van zonnepanelen tot klimaatbeheersing — Van Der Ham Elektrotechniek levert vakwerk."
+    />
     <link rel="stylesheet" href="./styles/styles.css" />
     <link rel="stylesheet" href="./styles/sub.css" />
     <link rel="stylesheet" href="./styles/sub2.css" />
@@ -13,113 +17,121 @@
     <header class="nav-home">
       <a href="./index.html">
         <img
-          src="./images/Van Der Ham - Elektrotechniek - Logo-49.png"
+          src="./images/NEWLOGO.svg"
           alt="van der ham logo"
         />
       </a>
 
-      <button class="hamburger-menu" aria-label="Menu">☰</button>
+      <button class="hamburger-menu" aria-label="Menu">&#9776;</button>
 
       <div class="nav-rechts">
         <a href="./diensten.html" class="diensten-btn">DIENSTEN</a>
-        <a href="./projecten.html" class="projecten-btn">PROJECTEN</a>
+        <a href="./projecten.html" class="projecten-btn actief">PROJECTEN</a>
         <a href="./overons.html" class="overons-btn">OVER ONS</a>
         <a href="./contact.html" class="contact-btn">CONTACT</a>
       </div>
     </header>
 
     <main>
-      <section class="contact-hero">
-        <div class="contact-hero-content">
-          <nav class="breadcrumb">
-            <a href="./index.html">Home</a>
-            <span class="breadcrumb-pijltje">›</span>
-            <a href="#"
-              ><strong class="breadcrumb-highlight">Projecten</strong></a
-            >
-          </nav>
-          <h1>PROJECTEN</h1>
+      <section class="overons-hero">
+        <nav class="breadcrumb">
+          <a href="./index.html">Home</a>
+          <span class="breadcrumb-pijltje">&#8250;</span>
+          <a href="./projecten.html"
+            ><strong class="breadcrumb-highlight">Projecten</strong></a
+          >
+        </nav>
+        <h1>Onze <span class="hero-accent">projecten</span></h1>
+        <p>
+          Een greep uit onze recent opgeleverde werkzaamheden. Van duurzame
+          energie tot klimaatoplossingen — altijd met oog voor kwaliteit.
+        </p>
+      </section>
 
-          <img
-            src="./images/tandwiel2-42.png"
-            alt="Draaiend tandwiel"
-            class="tandwiel"
-          />
+      <section class="projecten-grid-sectie">
+        <div class="projecting-wrapper">
+          <a class="project-card" href="./projecten/testproject.html">
+            <div class="project-card-img">
+              <img src="./images/zonnepanelen.jpg" alt="Airconditioning schoolgebouw" />
+              <span class="project-tag">KLIMAAT</span>
+            </div>
+            <div class="project-card-info">
+              <small class="project-locatie">&#9679; Haarlem</small>
+              <h4>Airconditioning voor hele school</h4>
+              <p>Airconditioning door het gehele schoolgebouw geplaatst.</p>
+            </div>
+          </a>
+          <a class="project-card" href="./projecten/testproject.html">
+            <div class="project-card-img">
+              <img src="./images/herobanner.jpeg" alt="Laadpalen geplaatst" />
+              <span class="project-tag">MOBILITEIT</span>
+            </div>
+            <div class="project-card-info">
+              <small class="project-locatie">&#9679; Nieuw-Vennep</small>
+              <h4>Vier laadpalen geplaatst</h4>
+              <p>Vier laadpalen geplaatst bij een kleine onderneming.</p>
+            </div>
+          </a>
+          <a class="project-card" href="./projecten/testproject.html">
+            <div class="project-card-img">
+              <img src="./images/80355.jpg" alt="Thuisbatterij straat" />
+              <span class="project-tag">DUURZAAM</span>
+            </div>
+            <div class="project-card-info">
+              <small class="project-locatie">&#9679; Lisse</small>
+              <h4>Thuisbatterij geplaatst bij hele straat</h4>
+              <p>Deze straat wilde graag allemaal een thuisbatterij.</p>
+            </div>
+          </a>
+          <a class="project-card" href="./projecten/testproject.html">
+            <div class="project-card-img">
+              <img src="./images/zonnepanelen.jpg" alt="Zonnepanelen woning" />
+              <span class="project-tag">DUURZAAM</span>
+            </div>
+            <div class="project-card-info">
+              <small class="project-locatie">&#9679; Hillegom</small>
+              <h4>Zonnepanelen op vrijstaande woning</h4>
+              <p>Complete installatie van 16 zonnepanelen met thuisbatterij.</p>
+            </div>
+          </a>
+          <a class="project-card" href="./projecten/testproject.html">
+            <div class="project-card-img">
+              <img src="./images/smarthome_tegel.jpg" alt="Smart home systeem" />
+              <span class="project-tag">SMART HOME</span>
+            </div>
+            <div class="project-card-info">
+              <small class="project-locatie">&#9679; Noordwijk</small>
+              <h4>Slimme verlichting in nieuwbouwwoning</h4>
+              <p>Volledig smart home systeem met lichtscenes en automatisering.</p>
+            </div>
+          </a>
+          <a class="project-card" href="./projecten/testproject.html">
+            <div class="project-card-img">
+              <img src="./images/klimaatbeheer_tegel.jpg" alt="Warmtepomp bedrijf" />
+              <span class="project-tag">KLIMAAT</span>
+            </div>
+            <div class="project-card-info">
+              <small class="project-locatie">&#9679; Sassenheim</small>
+              <h4>Warmtepompsysteem voor kantoorpand</h4>
+              <p>Energiezuinig klimaatsysteem voor een middelgroot kantoor.</p>
+            </div>
+          </a>
         </div>
       </section>
 
-      <section class="projecten-overzicht">
-        <div class="project-links">
-          <div class="project-content">
-            <h2>Plaatsing zonnepanelen</h2>
-            <small class="projecten-datum">Mei 2025</small>
-            <p>
-              Goed stuk tekst over het project. Veel samengewerkt met leuke
-              collega's en tot een mooi eindresultaat gekomen! Goed stuk tekst
-              over het project. Veel samengewerkt met leuke collega's en tot een
-              mooi eindresultaat gekomen!
-            </p>
-            <a href="./projecten/testproject.html" class="project-button"
-              >Bekijk volledig project</a
-            >
-          </div>
-          <div class="project-afbeelding">
-            <img src="./images/zonnepanelen.jpg" alt="zonnepanelen" />
-          </div>
-        </div>
-
-        <div class="project-links">
-          <div class="project-content">
-            <h2>Plaatsing zonnepanelen</h2>
-            <small class="projecten-datum">Mei 2025</small>
-            <p>
-              Goed stuk tekst over het project. Veel samengewerkt met leuke
-              collega's en tot een mooi eindresultaat gekomen! Goed stuk tekst
-              over het project. Veel samengewerkt met leuke collega's en tot een
-              mooi eindresultaat gekomen!
-            </p>
-            <a href="" class="project-button">Bekijk volledig project</a>
-          </div>
-          <div class="project-afbeelding">
-            <img src="./images/zonnepanelen.jpg" alt="zonnepanelen" />
-          </div>
-        </div>
-
-        <div class="project-links">
-          <div class="project-content">
-            <h2>Plaatsing zonnepanelen</h2>
-            <small class="projecten-datum">Mei 2025</small>
-            <p>
-              Goed stuk tekst over het project. Veel samengewerkt met leuke
-              collega's en tot een mooi eindresultaat gekomen! Goed stuk tekst
-              over het project. Veel samengewerkt met leuke collega's en tot een
-              mooi eindresultaat gekomen!
-            </p>
-            <a href="" class="project-button">Bekijk volledig project</a>
-          </div>
-          <div class="project-afbeelding">
-            <img src="./images/zonnepanelen.jpg" alt="zonnepanelen" />
-          </div>
-        </div>
-
-        <div class="project-links">
-          <div class="project-content">
-            <h2>Plaatsing zonnepanelen</h2>
-            <small class="projecten-datum">Mei 2025</small>
-            <p>
-              Goed stuk tekst over het project. Veel samengewerkt met leuke
-              collega's en tot een mooi eindresultaat gekomen! Goed stuk tekst
-              over het project. Veel samengewerkt met leuke collega's en tot een
-              mooi eindresultaat gekomen!
-            </p>
-            <a href="" class="project-button">Bekijk volledig project</a>
-          </div>
-          <div class="project-afbeelding">
-            <img src="./images/zonnepanelen.jpg" alt="zonnepanelen" />
-          </div>
+      <section class="overons-cta">
+        <h2>Een project bespreken?</h2>
+        <p>
+          Neem vrijblijvend contact met ons op. We denken graag met u mee over
+          de beste oplossing voor uw situatie.
+        </p>
+        <div class="overons-buttons">
+          <a href="./contact.html">Neem contact op</a>
+          <a href="./contact.html#contactformulier">Vraag offerte aan</a>
         </div>
       </section>
     </main>
+
     <footer>
       <section class="footer-links">
         <div class="footer-gegevens1">
@@ -134,9 +146,9 @@
       </section>
       <section class="footer-rechts">
         <div class="social-knoppen">
-          <a href=""><img src="./svg/linkedinrond.svg" alt="" /></a>
-          <a href=""><img src="./svg/instarond.svg" alt="" /></a>
-          <a href=""><img src="./svg/facebookrond.svg" alt="" /></a>
+          <a href="https://www.linkedin.com/in/nick-van-der-ham-24bb65187/?originalSubdomain=nl" target="_blank" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="#ffffff" xmlns="http://www.w3.org/2000/svg"><path d="M6.94 5a2 2 0 1 1-4 0 2 2 0 0 1 4 0ZM7 8.48H3V21h4V8.48ZM13.32 8.48H9.34V21h3.94v-6.57c0-3.66 4.77-4 4.77 0V21H22v-7.93c0-6.17-7.06-5.94-8.72-2.91l.04-1.68Z"/></svg></a>
+          <a href="#" target="_blank" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="#ffffff" xmlns="http://www.w3.org/2000/svg"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2Zm-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6Zm9.65 1.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"/></svg></a>
+          <a href="#" target="_blank" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="#ffffff" xmlns="http://www.w3.org/2000/svg"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12Z"/></svg></a>
         </div>
       </section>
     </footer>
