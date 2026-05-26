@@ -83,18 +83,6 @@
   padding: 0;
 }
 
-.service-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 1rem 0;
-  gap: 1rem;
-  transition: background-color 0.3s ease;
-  font-family: "IBM", sans-serif;
-  font-size: var(--font-size-small);
-}
-
 .projecting {
   padding: 4rem 7vw;
   font-family: "IBM", sans-serif;
@@ -171,6 +159,22 @@
   gap: 0.4rem;
 }
 
+.project-card-info::after {
+  content: "Bekijk project →";
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-family: "IBM", sans-serif;
+  font-size: var(--font-size-small);
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  color: var(--dark-blue);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-card-info::after {
+  transform: translateX(5px);
+}
+
 .project-locatie {
   font-size: var(--font-size-small);
   color: #6b7280;
@@ -191,26 +195,94 @@
   font-weight: 300;
 }
 
-.erkend-leerbedrijf img {
-  width: 100%;
-  max-width: 200px;
-  height: auto;
-  border-radius: var(--border-radius-md);
-}
-
-.erkend-leerbedrijf {
-  display: flex;
-  align-items: center;
-  padding: 4rem 7vw;
+.certificeringen {
+  padding: 5rem 7vw 6rem;
   background-color: var(--light-gray);
-  gap: 3rem;
   font-family: "IBM", sans-serif;
 }
 
-.erkend-leerbedrijf p {
-  font-size: var(--font-size-base);
+.certificeringen small {
+  display: inline-block;
+  font-weight: 500;
+  font-size: var(--font-size-small);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--highlight-blue);
+  margin-bottom: 0.75rem;
+}
+
+.certificeringen h2 {
+  font-family: "Barlow", sans-serif;
+  font-weight: 700;
+  font-size: var(--font-size-h2);
   color: var(--dark-blue);
+  line-height: 1.15;
+  margin-bottom: 2.5rem;
+}
+
+.certificeringen-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.certificering-card {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.75rem 2rem;
+  background-color: #ffffff;
+  border-radius: var(--border-radius-lg);
+  border-left: 3px solid var(--highlight-blue);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.certificering-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px -8px rgba(17, 24, 51, 0.12);
+}
+
+.certificering-card img {
+  width: 5.5rem;
+  height: 5.5rem;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.certificering-tekst h3 {
+  font-family: "Barlow", sans-serif;
+  font-weight: 700;
+  font-size: var(--font-size-small-md);
+  color: var(--dark-blue);
+  margin-bottom: 0.4rem;
+}
+
+.certificering-tekst p {
+  font-size: var(--font-size-small);
+  line-height: 1.55;
+  color: #4a5568;
   font-weight: 300;
+}
+
+@media (max-width: 768px) {
+  .certificeringen {
+    padding: 3.5rem 7vw 4rem;
+  }
+
+  .certificeringen-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .certificering-card {
+    padding: 1.25rem 1.5rem;
+    gap: 1.25rem;
+  }
+
+  .certificering-card img {
+    width: 4.5rem;
+    height: 4.5rem;
+  }
 }
 
 .overons-hero {
@@ -221,12 +293,25 @@
 }
 
 .overons-hero h1 {
+  position: relative;
+  padding-left: 1.25rem;
   font-family: "Barlow", sans-serif;
   font-size: clamp(2.2rem, 4vw, 3.5rem);
   font-weight: 700;
   color: var(--dark-blue);
   line-height: 1.1;
   max-width: 600px;
+}
+
+.overons-hero h1::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.15em;
+  bottom: 0.15em;
+  width: 4px;
+  background-color: var(--highlight-blue);
+  border-radius: 2px;
 }
 
 .overons-hero p {
@@ -345,9 +430,9 @@
 
 .overons-buttons a:hover {
   cursor: pointer;
-  background-color: #D07300;
+  background-color: var(--highlight-blue-hover);
   color: #ffffff;
-  border: 1px solid #D07300;
+  border: 1px solid var(--highlight-blue-hover);
 }
 
 .uitlichting1 {
@@ -416,9 +501,9 @@
 }
 
 .uitlichting1-links button:hover {
-  background-color: #D07300;
+  background-color: var(--highlight-blue-hover);
   color: #ffffff;
-  border: 1px solid #D07300;
+  border: 1px solid var(--highlight-blue-hover);
 }
 
 .uitlichting1-links,
@@ -440,22 +525,84 @@
   object-fit: cover;
 }
 
+/* === 404 PAGINA === */
+
+.notfound {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 4.5rem);
+  padding: 8rem 7vw 6rem;
+  background-color: var(--light-gray);
+  font-family: "IBM", sans-serif;
+}
+
+.notfound-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25rem;
+  max-width: 32rem;
+}
+
+.notfound-code {
+  font-family: "Barlow", sans-serif;
+  font-weight: 800;
+  font-size: clamp(4rem, 3rem + 6vw, 8rem);
+  line-height: 1;
+  color: var(--highlight-blue);
+  letter-spacing: -0.02em;
+}
+
+.notfound-content h1 {
+  position: relative;
+  padding-left: 1.25rem;
+  font-family: "Barlow", sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.8rem, 1.4rem + 1.5vw, 2.5rem);
+  line-height: 1.15;
+  color: var(--dark-blue);
+}
+
+.notfound-content h1::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.15em;
+  bottom: 0.15em;
+  width: 4px;
+  background-color: var(--highlight-blue);
+  border-radius: 2px;
+}
+
+.notfound-content p {
+  font-size: var(--font-size-base);
+  line-height: 1.7;
+  font-weight: 300;
+  color: #3a4360;
+}
+
+.notfound-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.hero-btn-secondary--dark {
+  background-color: rgba(17, 24, 51, 0.06) !important;
+  color: var(--dark-blue) !important;
+  border-color: rgba(17, 24, 51, 0.15) !important;
+}
+
+.hero-btn-secondary--dark:hover {
+  background-color: rgba(17, 24, 51, 0.1) !important;
+  border-color: var(--dark-blue) !important;
+}
+
 @media (max-width: 768px) {
   .projecting-wrapper {
     grid-template-columns: 1fr;
-  }
-
-  .smart-home,
-  .duurzame-energie,
-  .thuisbatterij,
-  .klimaatbeheersystemen,
-  .elektrotechniek {
-    flex-direction: column;
-  }
-
-  .diensten-verborgen-img {
-    width: 100%;
-    height: auto;
   }
 
   .uitlichting1-links {

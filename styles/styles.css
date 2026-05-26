@@ -72,6 +72,7 @@
 :root {
   --primary-blue: #111833;
   --highlight-blue: #F28500;
+  --highlight-blue-hover: #D07300;
   --dark-blue: #111833;
   --light-gray: #f2f4f8;
 
@@ -103,14 +104,14 @@ body {
 
 .nav-home {
   display: flex;
-  align-items: stretch;
+  align-items: center;
   z-index: 100;
   justify-content: space-between;
   font-family: "IBM", sans-serif;
   font-size: var(--font-size-button);
   text-decoration: none;
   background-color: var(--dark-blue);
-  padding: 0 7vw 0 7vw;
+  padding: 0 7vw;
   position: fixed;
   top: 0;
   left: 0;
@@ -132,8 +133,8 @@ body {
 
 .nav-rechts {
   display: flex;
-  align-items: stretch;
-  gap: 0;
+  align-items: center;
+  gap: 0.25rem;
   font-size: clamp(0.8125rem, 0.7632rem + 0.1974vw, 1rem);
 }
 
@@ -141,64 +142,53 @@ body {
   position: relative;
   display: flex;
   align-items: center;
-  padding: 0 2rem;
-  color: #ffffff;
+  padding: 0.5rem 1.1rem;
+  color: rgba(255, 255, 255, 0.78);
   text-decoration: none;
-  letter-spacing: 1px;
-  font-weight: 700;
+  letter-spacing: 0.5px;
+  font-weight: 500;
   text-transform: uppercase;
-  background-color: rgba(255, 255, 255, 0.04);
-  clip-path: polygon(18px 0, 100% 0, calc(100% - 18px) 100%, 0 100%);
-  margin-left: -18px;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  overflow: hidden;
+  transition: color 0.3s ease;
 }
 
-.nav-rechts a:first-child {
-  margin-left: 0;
-  padding-left: 2.2rem;
-}
-
-.nav-rechts a:nth-child(even) {
-  background-color: rgba(255, 255, 255, 0.09);
-}
-
-.nav-rechts a:hover {
-  color: #ffffff;
-  background-color: rgba(255, 255, 255, 0.15);
-}
-
-.nav-rechts a::after {
+.nav-rechts a:not(.contact-btn)::after {
   content: "";
   position: absolute;
-  top: 0;
-  left: -150%;
-  width: 70%;
-  height: 100%;
-  background: linear-gradient(
-    100deg,
-    transparent 0%,
-    rgba(255, 255, 255, 0) 30%,
-    rgba(255, 255, 255, 0.45) 50%,
-    rgba(255, 255, 255, 0) 70%,
-    transparent 100%
-  );
-  transition: left 0.7s ease;
-  pointer-events: none;
+  left: 1.1rem;
+  right: 1.1rem;
+  bottom: 0.4rem;
+  height: 1.5px;
+  background-color: var(--highlight-blue);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.3s cubic-bezier(0.65, 0, 0.35, 1);
 }
 
-.nav-rechts a:hover::after {
-  left: 150%;
+.nav-rechts a:not(.contact-btn):hover {
+  color: #ffffff;
+}
+
+.nav-rechts a:not(.contact-btn):hover::after {
+  transform: scaleX(1);
 }
 
 .contact-btn {
+  margin-left: 0.75rem;
+  padding: 0.55rem 1.4rem !important;
   background-color: var(--highlight-blue) !important;
   color: #ffffff !important;
+  border-radius: 999px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease,
+    transform 0.3s ease;
 }
 
 .contact-btn:hover {
-  background-color: #D07300 !important;
+  background-color: var(--highlight-blue-hover) !important;
   color: #ffffff !important;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px -6px rgba(242, 133, 0, 0.55);
 }
 
 /* === HEADER EIND === */
@@ -295,8 +285,8 @@ body {
 }
 
 .hero-btn-primary:hover {
-  background-color: #D07300;
-  border-color: #D07300;
+  background-color: var(--highlight-blue-hover);
+  border-color: var(--highlight-blue-hover);
 }
 
 .hero-btn-secondary {
@@ -320,67 +310,127 @@ body {
 
 .hulp-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
 }
 
 .hulp-sectie {
   padding: 4rem 7vw;
-  text-align: center;
 }
 
 .hulp-tegel {
   position: relative;
-  border-radius: var(--border-radius-md);
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
-  aspect-ratio: 1 / 1.8;
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  border-radius: var(--border-radius-md);
+  background-color: var(--dark-blue);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.hulp-tegel-img {
+.hulp-tegel:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 36px -14px rgba(17, 24, 51, 0.28);
+}
+
+.hulp-tegel-image-wrap {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.hulp-tegel-image-wrap img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: filter 0.4s ease, transform 0.4s ease;
+  transition: transform 0.6s ease;
 }
 
-.hulp-tegel:hover .hulp-tegel-img {
-  filter: brightness(0.35);
+.hulp-tegel:hover .hulp-tegel-image-wrap img {
   transform: scale(1.05);
 }
 
-.hulp-overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 2;
+.hulp-tegel-content {
+  position: relative;
+  padding: 2.75rem 1.85rem 1.85rem;
   color: #ffffff;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.hulp-tegel-icon {
+  position: absolute;
+  top: -1.5rem;
+  left: 1.85rem;
+  width: 3rem;
+  height: 3rem;
+  background-color: var(--highlight-blue);
+  border-radius: var(--border-radius-md);
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  padding: 5rem 1rem 1.5rem;
-  background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.85) 0%,
-    rgba(0, 0, 0, 0.55) 50%,
-    transparent 100%
-  );
-  transition: opacity 0.4s ease;
+  box-shadow: 0 6px 16px rgba(242, 133, 0, 0.35);
+  transition: transform 0.3s ease;
 }
 
-.hulp-tegel:hover .hulp-overlay {
-  opacity: 0;
+.hulp-tegel:hover .hulp-tegel-icon {
+  transform: rotate(-4deg) scale(1.05);
 }
 
-.hulp-overlay p {
+.hulp-tegel-icon img {
+  width: 1.4rem;
+  height: 1.4rem;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+.hulp-tegel-content h2,
+.hulp-tegel-content h3 {
+  font-family: "Barlow", sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.2rem, 0.95rem + 0.7vw, 1.6rem);
+  line-height: 1.15;
+  margin-bottom: 0.6rem;
+  color: #ffffff;
+}
+
+.hulp-tegel-content p {
   font-family: "IBM", sans-serif;
-  font-weight: 600;
   font-size: var(--font-size-small);
-  letter-spacing: 0.5px;
+  font-weight: 300;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.78);
+  margin-bottom: 1.25rem;
+  flex: 1;
 }
+
+.hulp-tegel-arrow {
+  align-self: flex-start;
+  font-family: "IBM", sans-serif;
+  font-size: var(--font-size-small);
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  color: var(--highlight-blue);
+  transition: transform 0.3s ease;
+}
+
+.hulp-tegel:hover .hulp-tegel-arrow {
+  transform: translateX(5px);
+}
+
+@media (max-width: 768px) {
+  .hulp-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hulp-tegel-image-wrap {
+    aspect-ratio: 16 / 10;
+  }
+}
+
 
 .hulp-header {
   display: flex;
@@ -412,57 +462,6 @@ body {
   color: var(--dark-blue);
   font-family: "Barlow", sans-serif;
   font-size: var(--font-size-h2);
-}
-
-.hulp-hover {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 3;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  justify-content: flex-end;
-  flex-direction: column;
-  text-align: center;
-  transition: transform 0.4s ease, opacity 0.4s ease;
-  transform: translateY(30px);
-  opacity: 0;
-  padding: 2rem 1.5rem;
-  color: #ffffff;
-  font-family: "IBM", sans-serif;
-  font-weight: 500;
-  pointer-events: none;
-}
-
-.hulp-tegel:hover .hulp-hover {
-  transform: translateY(0);
-  opacity: 1;
-}
-
-.hulp-hover img {
-  width: 50px;
-  height: 40px;
-  object-fit: contain;
-  filter: brightness(0) invert(1);
-}
-
-.hulp-hover p {
-  font-size: var(--font-size-small);
-  line-height: 1.5;
-  opacity: 0;
-  transform: translateY(10px);
-  transition: opacity 0.3s ease 0.15s, transform 0.3s ease 0.15s;
-}
-
-.hulp-tegel:hover .hulp-hover p {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.hulp-overlay .hulp-titel {
-  margin: 0;
 }
 
 .uitlichting {
@@ -529,9 +528,9 @@ body {
 }
 
 .uitlichting-links a:hover {
-  background-color: #D07300;
+  background-color: var(--highlight-blue-hover);
   color: #ffffff;
-  border: 1px solid #D07300;
+  border: 1px solid var(--highlight-blue-hover);
 }
 
 .uitlichting-links {
@@ -706,28 +705,22 @@ footer {
   .nav-rechts a {
     padding: 0.8rem 1rem;
     color: #ffffff;
-    clip-path: none;
-    margin-left: 0;
-    background-color: transparent;
     justify-content: center;
   }
 
-  .nav-rechts a:first-child {
-    padding-left: 1rem;
+  .nav-rechts a:not(.contact-btn)::after {
+    display: none;
   }
 
-  .nav-rechts a:nth-child(even) {
-    background-color: transparent;
-  }
-
-  .nav-rechts a:hover {
+  .nav-rechts a:not(.contact-btn):hover {
     background-color: rgba(255, 255, 255, 0.08);
   }
 
   .nav-rechts a.contact-btn {
     background-color: var(--highlight-blue) !important;
     margin: 0.5rem 7vw;
-    border-radius: var(--border-radius-md);
+    padding: 0.7rem 1.4rem !important;
+    border-radius: 999px;
   }
 
   .hulp-grid {
