@@ -586,15 +586,21 @@
   }
 
   .uitlichting1-links {
-    padding: 2rem 7vw;
+    padding: 2.5rem 7vw 3rem;
   }
 
   .uitlichting1 {
     flex-direction: column;
   }
 
+  .uitlichting1-rechts {
+    aspect-ratio: 16 / 10;
+    flex: none;
+    width: 100%;
+  }
+
   .waarden-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
   }
 
   .overons-buttons {

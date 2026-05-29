@@ -77,8 +77,11 @@
   padding: 0;
 }
 
+html,
 body {
   background-color: #ffffff;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 /* === HEADER BEGIN === */
@@ -708,11 +711,25 @@ footer {
   }
 
   .hulp-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
   }
 
   .uitlichting {
     flex-direction: column-reverse;
+  }
+
+  .uitlichting-rechts {
+    aspect-ratio: 16 / 10;
+    flex: none;
+    width: 100%;
+  }
+
+  .uitlichting-links {
+    padding: 2.5rem 7vw 3rem;
+  }
+
+  .nav-home img {
+    width: 10rem;
   }
 
   .social-knoppen a {
